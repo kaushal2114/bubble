@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+.main{
+  background-color: #030637;
+  /* background-color: rgb(65, 8, 82); */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: cursive;
+}
+/* img{
+  border-image-width: 700px;
+} */
+.bubble-board-outter {  
+  /* border: 2px solid black; */
+  z-index: 2;
+  height: 600px;
+  width: 1000px;
+  background: url(/images/bubble_board.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 990px 650px;
+  display: flex;
+  background-position-y: -39px;
+  background-position-x: 52px;
+  justify-content: center;
+  align-items: center;
+}
+.bubble-board-inner{
+  overflow: hidden;
+  height: 60%;
+  width: 70%;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  gap: 10px;
+}
+.bubbles{
+  padding: 5px; 
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  /* border: 1px solid purple; */
+  color: black;
+  background: url('/images/bubble-2.png');
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bubbles:hover{
+  cursor: pointer;
+  opacity: 0.4;
+}
+.score{
+  position: absolute;
+  background: url('/images/rip.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 190px;
+  width: 140px;
+  top: 20px;
+  right: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  color: antiquewhite;
+}
+h2{
+  padding: 20px;
+}
+p{
+  font-size: 40px;
+}
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: beige;
+  height: 200px;
+  width: 210px;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  background: url('/images/timer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ghost{
+  height: 250px;
+  width: 250px;
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  animation: my 3s linear 0s infinite;
+}
+@keyframes my {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#img-ghost{
+  transform: rotate(60deg);
+}
+
+.hit{
+  position: absolute;
+  top: 0px;
+  right: 33%;
+  height: 90px;
+  width: 260px;
+  /* border: 1px solid black; */
+  background: url('/images/score.png');
+  background-repeat: no-repeat;
+  background-size: 260px 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: antiquewhite;
+}
+.gameover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 100px;
+}
+.circle{
+  position: absolute;
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+  /* border: 2px solid black; */
+  top: 7%;
+  left: 3%;
+}
+.ghost-anim{
+  animation: my2 1s linear 0s infinite;
+}
+@keyframes my2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#gst-2{
+  z-index: 1;
+  width: 300px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.startgame{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 100px;
+}
+.s-g:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
